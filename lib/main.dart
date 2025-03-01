@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mi2a/screen/page_column.dart';
 import 'package:flutter_mi2a/screen/page_dua.dart';
+import 'package:flutter_mi2a/screen/page_gambar.dart';
+import 'package:flutter_mi2a/screen/page_list_horizontal.dart';
 import 'package:flutter_mi2a/screen/page_row.dart';
 import 'package:flutter_mi2a/screen/page_row_column.dart';
 import 'package:flutter_mi2a/screen/page_satu.dart';
 import 'package:flutter_mi2a/screen/page_tiga.dart';
+import 'package:flutter_mi2a/screen/page_url_image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,7 +59,7 @@ class PageUtama extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text("Welcome to App MI 2A"),
@@ -143,6 +146,45 @@ class PageUtama extends StatelessWidget {
               color: Colors.orange,
               child: Text(
                 "Page Row Column",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageListHorizontal()),
+                ); // berfungsi untuk pindah page
+              },
+              color: Colors.orange,
+              child: Text(
+                "Page List Horizontal",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageGambar()),
+                ); // berfungsi untuk pindah page
+              },
+              color: Colors.orange,
+              child: Text(
+                "Page Gambar",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageUrlImage()),
+                ); // berfungsi untuk pindah page
+              },
+              color: Colors.orange,
+              child: Text(
+                "Page URL Image",
                 style: TextStyle(fontSize: 14, color: Colors.white),
               ),
             ),
