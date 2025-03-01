@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mi2a/screen/page_column.dart';
+import 'package:flutter_mi2a/screen/page_dua.dart';
+import 'package:flutter_mi2a/screen/page_row.dart';
+import 'package:flutter_mi2a/screen/page_row_column.dart';
+import 'package:flutter_mi2a/screen/page_satu.dart';
+import 'package:flutter_mi2a/screen/page_tiga.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +43,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class PageUtama extends StatelessWidget{
+class PageUtama extends StatelessWidget {
   const PageUtama({super.key});
 
   @override
@@ -45,10 +51,103 @@ class PageUtama extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         title: Text("App MI 2A"),
+        centerTitle: true,
         backgroundColor: Colors.purple,
       ),
       body: Center(
-        child: Text("Welcome to App MI 2A"),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Welcome to App MI 2A"),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageSatu()),
+                ); // berfungsi untuk pindah page
+              },
+              color: Colors.orange,
+              child: Text(
+                "Page1",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PageDua()),
+                  );
+                },
+                elevation: 18.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                color: Colors.orange,
+                clipBehavior: Clip.antiAlias,
+                child: Text(
+                  "Page2",
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                ),
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageTiga()),
+                );
+              },
+              color: Colors.orange,
+              child: Text(
+                "Page3",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageColumn()),
+                ); // berfungsi untuk pindah page
+              },
+              color: Colors.orange,
+              child: Text(
+                "Page Column",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageRow()),
+                ); // berfungsi untuk pindah page
+              },
+              color: Colors.orange,
+              child: Text(
+                "Page Row",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageRowColumn()),
+                ); // berfungsi untuk pindah page
+              },
+              color: Colors.orange,
+              child: Text(
+                "Page Row Column",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
