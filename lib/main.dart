@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mi2a/screen/latihan_form/page_mahasiswa.dart';
 import 'package:flutter_mi2a/screen/nav_bar/page_tab_bar.dart';
 import 'package:flutter_mi2a/screen/page_column.dart';
 import 'package:flutter_mi2a/screen/page_dua.dart';
@@ -199,6 +200,19 @@ class PageUtama extends StatelessWidget {
               color: Colors.orange,
               child: Text(
                 "Page Tab Bar",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageMahasiswa()),
+                ); // berfungsi untuk pindah page
+              },
+              color: Colors.orange,
+              child: Text(
+                "Page form mahasiswa",
                 style: TextStyle(fontSize: 14, color: Colors.white),
               ),
             ),
