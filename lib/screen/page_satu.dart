@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 class PageSatu extends StatelessWidget {
   const PageSatu({super.key});
