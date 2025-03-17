@@ -63,7 +63,7 @@ class _MyWidgetState extends State<PageMahasiswa> {
                     underline: Container(),
                     isExpanded: true,
                     items:
-                        ['TI', "Mesi", "Elektro"].map((e) {
+                        ['TI', "Mesin", "Elektro"].map((e) {
                           return DropdownMenuItem(
                             value: e,
                             child: Padding(
